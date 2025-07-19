@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffdf7;
+  color: #3a3a3a;
+  line-height: 1.6;
+}
+
+/*Header*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background: transparent;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+header.scrolled {
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: #c9a26d;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo .lp {
+  width: 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav a {
+  font-size: 16px;
+  color: inherit;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #f1e3d3;
+  color: #c9a26d;
+}
+
+header.scrolled nav a {
+  color: #333;
+}
+
+/*Hero*/
+.hero {
+  height: 100vh;
+  background: url('../img/rustic-bread-and-bakery-banner-vector.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.bek:hover{
+    filter: brightness(60%);
+    transition: 0.6s;
+    transform: translateY(-6px);
+}
+.beke:hover{
+    filter: brightness(60%);
+    transition: 0.6s;
+    transform: translateY(-6px);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 60px 30px;
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+}
+
+.overlay h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.overlay .subtext {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background-color: #c9a26d;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background-color: #a88654;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn.secondary:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/*Section*/
+.section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.section img.bek,
+.section img.beke {
+  max-width: 500px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+.txt,
+.txte {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.txt h2,
+.txte h2 {
+  font-size: 32px;
+  color: #c9a26d;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-inline: auto;
+  line-height: 1.8;
+}
+
+.section ul {
+  list-style: disc inside;
+  color: #555;
+  font-size: 18px;
+  text-align: left;
+}
+
+/*Cards*/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  max-width: 320px;
+  flex: 1 1 280px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(90, 68, 37, 0.815);
+}
+
+.card img.im {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #a88654;
+  font-size: 22px;
+}
+
+/*Contact*/
+.contact-section {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  color: #c9a26d;
+  margin-bottom: 25px;
+}
+
+.contact-section .lo,
+.contact-section .con {
+  font-size: 17px;
+  color: #4a4a4a;
+  margin-top: 15px;
+}
+
+/*Footer*/
+.footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #f4f1eb;
+  color: #777;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+  header {
+    padding: 15px 25px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .overlay h1 {
+    font-size: 36px;
+  }
+
+  .overlay .subtext {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  .contact-section h2 {
+    font-size: 26px;
+  }
+}
