@@ -6,124 +6,136 @@
   <title>Family Bakery</title>
   <link rel="stylesheet" href="./css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
-  <header id="navbar">
+  <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
     <div class="container">
-      <div class="logo">
-        <img class="lp" src="./img/food.png" alt="Logo" />
+      <a class="navbar-brand d-flex align-items-center text-warning fw-bold fs-3" href="#">
+        <img src="./img/food.png" alt="Logo" width="40" class="me-2" />
         Family Bakery
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#offer">Our Offer</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offer">Our Offer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="overlay">
+  <section id="home" class="hero d-flex align-items-center justify-content-center text-center text-white" style="height: 100vh; background: url('./img/rustic-bread-and-bakery-banner-vector.jpg') center/cover no-repeat;">
+    <div class="overlay bg-dark bg-opacity-50 p-5 rounded">
       <p>Welcome to</p>
-      <h1>Family Bakery</h1>
-      <p class="subtext">
-        We're the biggest, best equipped and most advanced Bakery in the greater Los Angeles area.
-      </p>
-      <div class="buttons">
-        <a href="#about" class="btn primary">Learn More</a>
-        <a href="#contact" class="btn secondary">Contact Us</a>
+      <h1 class="display-4 fw-bold">Family Bakery</h1>
+      <p class="lead">We're the biggest, best equipped and most advanced Bakery in the greater Los Angeles area.</p>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+        <a href="#about" class="btn btn-warning">Learn More</a>
+        <a href="#contact" class="btn btn-outline-light">Contact Us</a>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="section">
-    <img class="bek" src="./img/alexandru-stavrica-170390-800x760.jpg" alt="Bakery" />
-    <div class="txt">
-      <h2>Who We Are?</h2>
-      <p>
-        We have been operating for over 30 years… We care about the environment, trusted by hundreds, loved on social media.
-      </p>
-      <ul>
-        <li>We care about the environment.</li>
-        <li>We are trusted by hundreds of clients.</li>
-        <li>Social media loves us!</li>
-        <li>This list is super easy to create.</li>
-      </ul>
+  <section id="about" class="py-5 container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="./img/alexandru-stavrica-170390-800x760.jpg" class="img-fluid rounded" alt="Bakery">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-warning fw-bold">Who We Are?</h2>
+        <p>We have been operating for over 30 years… We care about the environment, trusted by hundreds, loved on social media.</p>
+        <ul>
+          <li>We care about the environment.</li>
+          <li>We are trusted by hundreds of clients.</li>
+          <li>Social media loves us!</li>
+          <li>This list is super easy to create.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- Offer -->
-  <section id="offer" class="section">
-    <h2 class="tex">Our Baking</h2>
-    <div class="cards">
-      <div class="card">
-        <img class="im" src="./img/BHG-milk-bread-4CdeIL1uKGyB5ryU8J_EED-aaa76729c86a413ca7500029edba79f0.jpg" alt="Bread" />
-        <h3>Superior Breads</h3>
-        <p>Proin interdum… at semper mauris velit a velit.</p>
-      </div>
-      <div class="card">
-        <img class="im" src="./img/k_Photo_Recipes_2020-08-how-to-make-bagels_2020_howto_bagels_shot14_197.jpeg" alt="Bagels" />
-        <h3>Bagels</h3>
-        <p>Proin interdum… at semper mauris velit a velit.</p>
-      </div>
-      <div class="card">
-        <img class="im" src="./img/Chocolate-Chunk-Halwah-Cookies-FT-RECIPE0923-1f8df755df6d468da98887aa846a2fe3.jpg" alt="Cookies" />
-        <h3>Cookies</h3>
-        <p>Proin interdum… at semper mauris velit a velit.</p>
+  <section id="offer" class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="text-warning mb-4">Our Baking</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="./img/BHG-milk-bread-4CdeIL1uKGyB5ryU8J_EED-aaa76729c86a413ca7500029edba79f0.jpg" class="card-img-top" alt="Bread">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Superior Breads</h5>
+              <p class="card-text">Proin interdum… at semper mauris velit a velit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="./img/k_Photo_Recipes_2020-08-how-to-make-bagels_2020_howto_bagels_shot14_197.jpeg" class="card-img-top" alt="Bagels">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Bagels</h5>
+              <p class="card-text">Proin interdum… at semper mauris velit a velit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="./img/Chocolate-Chunk-Halwah-Cookies-FT-RECIPE0923-1f8df755df6d468da98887aa846a2fe3.jpg" class="card-img-top" alt="Cookies">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Cookies</h5>
+              <p class="card-text">Proin interdum… at semper mauris velit a velit.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Location -->
-  <section id="loc" class="section">
-    <img class="beke" src="./img/full-2-800x640.jpg" alt="Our Bakery" />
-    <div class="txte">
-      <h2>Our Location</h2>
-      <p>
-        We have been operating for over 30 years and are Members of The Federation of Master Builders.
-        We work on projects big and small from small residential extensions to full house.
-        We are so happy with this theme. Everyday it makes our lives better.
-      </p>
-      <p>
-        We work on projects big and small… We are so happy with this theme. Everyday it makes our lives better.
-      </p>
+  <section id="loc" class="py-5 container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="./img/full-2-800x640.jpg" class="img-fluid rounded" alt="Our Bakery">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-warning fw-bold">Our Location</h2>
+        <p>We have been operating for over 30 years and are Members of The Federation of Master Builders...</p>
+        <p>We work on projects big and small… We are so happy with this theme. Everyday it makes our lives better.</p>
+      </div>
     </div>
   </section>
 
-  <hr>
-
   <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <h2 class="con">Contact Information</h2>
-    <p class="lo">Manchester St 123-78B, Random 713, UK</p>
-    <p class="lo">+46 123 456 789 | hello@sitename.com</p>
-    <p class="lo">Opening Hours: Mon–Fri 10AM–10PM, Weekends 10AM–11PM</p>
+  <section id="contact" class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="text-warning mb-3">Contact Information</h2>
+      <p class="mb-1">Manchester St 123-78B, Random 713, UK</p>
+      <p class="mb-1">+46 123 456 789 | hello@sitename.com</p>
+      <p>Opening Hours: Mon–Fri 10AM–10PM, Weekends 10AM–11PM</p>
+    </div>
   </section>
 
-  <!-- Footer And Map -->
-  <footer class="footer">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4218821272854!2d31.23571111511525!3d30.044419981878262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458410e3e2f1c63%3A0xf6e2a32ee3c0f72f!2z2KfZhNix2YrYqQ!5e0!3m2!1sar!2seg!4v1620251687134!5m2!1sar!2seg"
-      width="100%"
-      height="400"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-    <p>&copy; 2025 Family Bakery. All rights reserved. Designed by Yousef Badr Eldien</p>
+  <!-- Footer and Map -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4218821272854!2d31.23571111511525!3d30.044419981878262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458410e3e2f1c63%3A0xf6e2a32ee3c0f72f!2z2KfZhNix2YrYqQ!5e0!3m2!1sar!2seg!4v1620251687134!5m2!1sar!2seg"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+      <p class="mt-3 mb-0">&copy; 2025 Family Bakery. Designed by Yousef Badr Eldien</p>
+    </div>
   </footer>
-
-  <!-- Script -->
   <script src="./javas/bas.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
